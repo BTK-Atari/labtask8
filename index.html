@@ -3,16 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Webpage</title>
+    <title>Acunetix Quiz</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Webpage</h1>
-    <p>This is a simple webpage created using HTML and CSS.</p>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>GitHub</li>
-    </ul>
+    <h1>Acunetix Quiz</h1>
+    <form id="quizForm">
+        <label for="question1">1. Acunetix is a web __________ scanner.</label>
+        <input type="text" id="question1" name="question1">
+        <p id="result1"></p>
+
+        <label for="question2">2. Acunetix helps to identify and fix __________ vulnerabilities.</label>
+        <input type="text" id="question2" name="question2">
+        <p id="result2"></p>
+
+        <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+
+    <script>
+        function checkAnswers() {
+            var answers = {
+                question1: "vulnerability",
+                question2: "web application"
+            };
+
+            Object.keys(answers).forEach(function(question) {
+                var userAnswer = document.getElementById(question).value.trim().toLowerCase();
+                var result = document.getElementById("result" + question.slice(-1));
+
+                if (userAnswer === answers[question]) {
+                    result.textContent = "Correct!";
+                    result.style.color = "green";
+                } else {
+                    result.textContent = "Incorrect. Please try again.";
+                    result.style.color = "red";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
+
