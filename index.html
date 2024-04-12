@@ -61,21 +61,16 @@
             Object.keys(answers).forEach(function(question) {
                 var userAnswer = document.getElementById(question).value.trim().toLowerCase();
                 var result = document.getElementById("result" + question.slice(-1));
-                var correctCount = 0; // Variable to count correct answers
 
                 if (userAnswer === answers[question]) {
                     result.textContent = "Correct!";
                     result.style.color = "green";
-                    correctCount++;
                 } else {
                     result.textContent = "Incorrect. Please try again.";
                     result.style.color = "red";
                 }
             });
-            // Display the score
-                var totalQuestions = Object.keys(answers).length;
-                var scoreElement = document.getElementById("score");
-                scoreElement.textContent = "Score: " + correctCount + " / " + totalQuestions;
+
     </script>
 </body>
 </html>
