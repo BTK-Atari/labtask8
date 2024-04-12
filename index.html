@@ -59,6 +59,17 @@
         <input type="text" id="question5" name="question5">
         <p id="result5"></p>
 
+        <label for="question6">5. __________ operating system is being used to host Pakistan Law Site.</label>
+        <input type="text" id="question6" name="question6">
+        <p id="result6"></p>
+
+        <label for="question7">5. What is the Acunetix Threat Level of the Pakistan Law Site?.</label>
+        <input type="text" id="question7" name="question7">
+        <p id="result7"></p>
+
+        <label for="question8">5. How many vulnerabilities are there of severity <strong>HIGH</strong> in Pakistan Law Site?.</label>
+        <input type="text" id="question8" name="question8">
+        <p id="result8"></p>
         
         <button type="button" onclick="checkAnswers()">Click Here To Check</button>
             <strong> SAVE A SCREENSHOT OF THIS AND UPLOAD </strong>
@@ -70,8 +81,11 @@
                 question1: "web application",
                 question2: "crawling",
                 question3: "compliance",
-                question4: "AcuSensor",
-                question5: "RESTful"
+                question4: "acusensor",
+                question5: "restful",
+                question6: "windows",
+                question7: "3",
+                question8: "4"
             };
 
             Object.keys(answers).forEach(function(question) {
