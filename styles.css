@@ -56,6 +56,7 @@ p {
 
 .input-container {
     margin-bottom: 20px;
+    text-align: center; /* Center the input fields */
 }
 
 .input-container label {
@@ -65,11 +66,13 @@ p {
 }
 
 .input-container input[type="text"] {
-    width: 100%;
+    width: 80%; /* Make the input fields smaller */
+    max-width: 300px; /* Limit the maximum width */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 14px; /* Decrease font size */
+    margin: 0 auto; /* Center the input fields */
 }
 
 .input-container input[type="text"]:focus {
