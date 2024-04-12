@@ -53,3 +53,27 @@ p {
     font-style: italic;
     font-size: 0.9em;
 }
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input-container input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
