@@ -57,10 +57,10 @@
                 var result = document.getElementById("result" + question.slice(-1));
 
                 if (userAnswer === answers[question]) {
-                    result.textContent = "Correct!";
+                    result.innerHTML = "<strong>Correct!</strong>"; // Wrap "Correct!" in <strong> tags
                     result.style.color = "green";
                 } else {
-                    result.textContent = "Incorrect. Please try again.";
+                    result.innerHTML = "<strong>Incorrect. Please try again.</strong>"; // Wrap "Incorrect" in <strong> tags
                     result.style.color = "red";
                 }
             });
