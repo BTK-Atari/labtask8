@@ -9,22 +9,38 @@
 <body>
     <h1>Acunetix Quiz</h1>
     <form id="quizForm">
-        <label for="question1">1. Acunetix is a web __________ scanner.</label>
+        <label for="question1">1.  Acunetix is an automated __________ security testing tool that helps audit and secure web applications by identifying vulnerabilities.</label>
         <input type="text" id="question1" name="question1">
         <p id="result1"></p>
 
-        <label for="question2">2. Acunetix helps to identify and fix __________ vulnerabilities.</label>
+        <label for="question2">2. Acunetix employs smart __________ algorithms to explore the entire website, ensuring comprehensive coverage and discovering hidden and deeply nested web pages.</label>
         <input type="text" id="question2" name="question2">
         <p id="result2"></p>
 
+        <label for="question3">3. The tool provides __________ reports that help organizations adhere to various security standards and regulations, such as OWASP Top Ten, PCI DSS, and HIPAA.</label>
+        <input type="text" id="question3" name="question3">
+        <p id="result3"></p>
+
+        <label for="question4">4. Acunetix integrates __________, a unique technology that enhances the accuracy of scanning results by providing additional information about the identified vulnerabilities, reducing false positives.</label>
+        <input type="text" id="question4" name="question4">
+        <p id="result4"></p>
+
+        <label for="question5">5. __________ API allows integration with other tools and automation of various tasks, streamlining the vulnerability management process.</label>
+        <input type="text" id="question5" name="question5">
+        <p id="result5"></p>
+
+        
         <button type="button" onclick="checkAnswers()">Submit</button>
     </form>
 
     <script>
         function checkAnswers() {
             var answers = {
-                question1: "vulnerability",
-                question2: "web application"
+                question1: "web application",
+                question2: "crawling",
+                question3: "compliance",
+                question4: "AcuSensor",
+                question5: "RESTful"
             };
 
             Object.keys(answers).forEach(function(question) {
