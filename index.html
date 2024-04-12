@@ -70,6 +70,12 @@
         <label for="question8">8. How many vulnerabilities are there of severity <strong>HIGH</strong> in Pakistan Law Site?.</label>
         <input type="text" id="question8" name="question8">
         <p id="result8"></p>
+
+        <label for="question9">8. __________ queries allows the database to understand which parts of the SQL query should be considered as user input, therefore solving SQL injection.</label>
+        <input type="text" id="question9" name="question9">
+        <p id="result9"></p>
+        
+
         
         <button type="button" onclick="checkAnswers()">Click Here To Check</button>
             <strong> SAVE A SCREENSHOT OF THIS AND UPLOAD </strong>
@@ -85,7 +91,8 @@
                 question5: "restful",
                 question6: "windows",
                 question7: "3",
-                question8: "4"
+                question8: "4",
+                question9: "parameterized"
             };
 
             Object.keys(answers).forEach(function(question) {
