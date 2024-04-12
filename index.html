@@ -18,6 +18,11 @@
         <label for="id">ID:</label>
         <input type="text" id="id" name="id" required>
     </div>
+
+    <!-- Score display section -->
+    <div class="score-container">
+        <p id="score"></p>
+    </div>
     <form id="quizForm">
         <label for="question1">1.  Acunetix is an automated __________ security testing tool that helps audit and secure web applications by identifying vulnerabilities.</label>
         <input type="text" id="question1" name="question1">
@@ -56,16 +61,21 @@
             Object.keys(answers).forEach(function(question) {
                 var userAnswer = document.getElementById(question).value.trim().toLowerCase();
                 var result = document.getElementById("result" + question.slice(-1));
+                var correctCount = 0; // Variable to count correct answers
 
                 if (userAnswer === answers[question]) {
                     result.textContent = "Correct!";
                     result.style.color = "green";
+                    correctCount++;
                 } else {
                     result.textContent = "Incorrect. Please try again.";
                     result.style.color = "red";
                 }
             });
-        }
+            // Display the score
+                var totalQuestions = Object.keys(answers).length;
+                var scoreElement = document.getElementById("score");
+                scoreElement.textContent = "Score: " + correctCount + " / " + totalQuestions;
     </script>
 </body>
 </html>
